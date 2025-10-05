@@ -69,7 +69,7 @@ export default function Home() {
                             <a href="#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                                 Features
                             </a>
-                            <a href="#docs" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                            <a href="/docs" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                                 Docs
                             </a>
                             <a href="#pricing" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
@@ -106,7 +106,7 @@ export default function Home() {
                         </p>
 
                         {/* Email Signup Form */}
-                        <div className="mb-8 flex flex-col items-center gap-4" ref={emailBoxRef}>
+                        <div id="join" className="mb-8 flex flex-col items-center gap-4" ref={emailBoxRef}>
                             <div className="relative rounded-sm border border-white/10 p-[1px] shadow-2xl backdrop-blur-sm">
                                 <div className="overflow-hidden rounded-sm bg-gradient-to-br from-teal-400/10 to-teal-400/5 p-8">
                                     <div className="mb-4 text-center">
@@ -615,7 +615,7 @@ export default function Home() {
 
                         <div className="flex items-center gap-6 text-sm text-muted-foreground">
                             <a href="#features" className="transition-colors hover:text-foreground">Features</a>
-                            <a href="#docs" className="transition-colors hover:text-foreground">Docs</a>
+                            <a href="/docs" className="transition-colors hover:text-foreground">Docs</a>
                             <a href="#pricing" className="transition-colors hover:text-foreground">Pricing</a>
                         </div>
 
