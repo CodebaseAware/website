@@ -1,5 +1,6 @@
 "use client"
 
+import { SiteNavbar } from "@/components/site-navbar"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ArrowDownLeft, ArrowRight, Binoculars, BookOpen, Code2, Lightbulb, Network, Sparkles } from "lucide-react"
@@ -15,12 +16,6 @@ export default function Home() {
         setOpenFAQ(openFAQ === index ? null : index)
     }
 
-    const scrollToEmailInput = () => {
-        emailBoxRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        setTimeout(() => {
-            emailInputRef.current?.focus()
-        }, 500)
-    }
 
     const faqs = [
         {
@@ -51,37 +46,7 @@ export default function Home() {
 
     return (
         <div className="dark min-h-screen bg-gradient-to-br from-[#0a0a0a] via-[#183838] to-[#0a0a0a] text-white">
-            {/* Navigation */}
-            <nav className="sticky top-0 z-50 border-b border-white/10 backdrop-blur-lg">
-                <div className="mx-auto max-w-7xl px-6 py-4">
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                            <Image
-                                src="/logo.svg"
-                                alt="MaiMap Logo"
-                                width={76}
-                                height={76}
-                                className="h-8 w-16 opacity-70"
-                            />
-                            <span className="font-sans text-xl font-semibold">MaiMap</span>
-                        </div>
-                        <div className="flex items-center gap-8">
-                            <a href="#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                                Features
-                            </a>
-                            <a href="/docs" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                                Docs
-                            </a>
-                            <a href="#pricing" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                                Pricing
-                            </a>
-                            <Button size="sm" className="bg-white text-black hover:bg-white/90 cursor-pointer" onClick={scrollToEmailInput}>
-                                Join waitlist
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <SiteNavbar />
 
             {/* Hero Section */}
             <section className="relative overflow-hidden">
@@ -451,9 +416,11 @@ export default function Home() {
                     <h2 className="mt-12 mb-8 text-3xl font-bold text-white md:text-4xl">Want to learn more?</h2>
 
                     {/* Badge */}
-                    <Button className="mt-12 mb-8 bg-white text-black hover:bg-white/90">
-                        <BookOpen className="h-4 w-4 mr-2" />
-                        Read the Docs
+                    <Button asChild className="mt-12 mb-8 bg-white text-black hover:bg-white/90">
+                        <a href="/docs">
+                            <BookOpen className="h-4 w-4 mr-2" />
+                            Read the Docs
+                        </a>
                     </Button>
                 </div>
             </section>
@@ -465,7 +432,7 @@ export default function Home() {
                         Pricing
                     </h2>
                     <p className="mb-16 text-lg text-muted-foreground">
-                        Choose the plan that fits your team's needs
+                        MaiMap is currently in prototype phase so the exact pricing is not yet determined. However there will be hosted and on-premise options available.
                     </p>
 
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
@@ -473,35 +440,27 @@ export default function Home() {
                         <div className="relative overflow-hidden rounded-sm border border-primary/30 bg-gradient-to-br from-primary/10 to-primary/5 p-8 shadow-2xl backdrop-blur-sm">
                             <div className="text-center">
                                 <h3 className="mb-2 text-2xl font-bold text-white">Pro</h3>
-                                <p className="mb-6 text-muted-foreground">Perfect for growing teams</p>
+                                <p className="mb-6 text-muted-foreground">For most teams</p>
 
                                 <div className="mb-8">
-                                    <span className="text-4xl font-bold text-white">$29</span>
-                                    <span className="text-muted-foreground">/month</span>
+                                    <span className="text-4xl font-bold text-white">Price TBD</span>
+                                    {/* <span className="text-muted-foreground">/month</span> */}
                                 </div>
 
                                 <ul className="mb-8 space-y-4 text-left">
                                     <li className="flex items-center gap-3">
                                         <div className="h-2 w-2 rounded-full bg-primary" />
-                                        <span className="text-muted-foreground">Up to 10 repositories</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="h-2 w-2 rounded-full bg-primary" />
-                                        <span className="text-muted-foreground">Unlimited queries</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="h-2 w-2 rounded-full bg-primary" />
-                                        <span className="text-muted-foreground">Real-time architecture graphs</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="h-2 w-2 rounded-full bg-primary" />
-                                        <span className="text-muted-foreground">Email support</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="h-2 w-2 rounded-full bg-primary" />
-                                        <span className="text-muted-foreground">API access</span>
+                                        <span className="text-muted-foreground">Up to 10 repositories*</span>
                                     </li>
                                 </ul>
+
+                                <div className="mb-8 text-center">
+                                    <p className="text-sm text-muted-foreground">
+                                        *Additional repositories beyond 10 will incur extra charges
+                                        <br />
+                                        *Large codebases will incur extra charges based on the number of lines of code
+                                    </p>
+                                </div>
 
                                 <Button className="w-full bg-gray-500 text-white cursor-not-allowed" disabled>
                                     Coming soon
@@ -532,19 +491,7 @@ export default function Home() {
                                     </li>
                                     <li className="flex items-center gap-3">
                                         <div className="h-2 w-2 rounded-full bg-primary" />
-                                        <span className="text-muted-foreground">Advanced security controls</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="h-2 w-2 rounded-full bg-primary" />
                                         <span className="text-muted-foreground">Priority support</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="h-2 w-2 rounded-full bg-primary" />
-                                        <span className="text-muted-foreground">Custom integrations</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="h-2 w-2 rounded-full bg-primary" />
-                                        <span className="text-muted-foreground">SLA guarantee</span>
                                     </li>
                                 </ul>
 
