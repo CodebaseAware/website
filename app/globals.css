@@ -41,11 +41,11 @@
 
 .dark {
   --background: #252525;
-  --foreground: #fafafa;
+  --foreground: #a3a3a3;
   --card: #252525;
-  --card-foreground: #fafafa;
+  --card-foreground: #a3a3a3;
   --popover: #252525;
-  --popover-foreground: #fafafa;
+  --popover-foreground: #a3a3a3;
   --primary: #fafafa;
   --primary-foreground: #404040;
   --secondary: #404040;
@@ -121,4 +121,14 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Override Nextra content color in dark mode */
+.nextra-content:is(html[class~=dark] *) {
+  color: #a3a3a3 !important;
+}
+
+/* Override markdown header titles color in dark mode */
+.dark\:_text-slate-100:is(html[class~=dark] *) {
+  color: #a3a3a3 !important;
 }

@@ -35,7 +35,7 @@ export function SiteNavbar() {
                 </div>
             </div>
             {/* ensure border is visible on any background without affecting layout */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-white/10" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-[3px] h-px bg-white/20" />
         </nav>
     )
 }
