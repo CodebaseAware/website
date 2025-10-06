@@ -1,11 +1,11 @@
 "use client"
 
+import { SiteFooter } from "@/components/site-footer"
 import { SiteNavbar } from "@/components/site-navbar"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ArrowDownLeft, ArrowRight, Binoculars, BookOpen, Code2, Lightbulb, Network, Sparkles } from "lucide-react"
-import Image from "next/image"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function Home() {
     const [openFAQ, setOpenFAQ] = useState<number | null>(null)
@@ -15,6 +15,22 @@ export default function Home() {
     const toggleFAQ = (index: number) => {
         setOpenFAQ(openFAQ === index ? null : index)
     }
+
+    // Handle scrolling to sections when page loads with hash
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (hash) {
+            // Remove the # from the hash
+            const elementId = hash.substring(1);
+            const element = document.getElementById(elementId);
+            if (element) {
+                // Small delay to ensure the page is fully rendered
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    }, []);
 
 
     const faqs = [
@@ -247,7 +263,7 @@ export default function Home() {
             </section>
 
             {/* Features Section */}
-            <section className="relative mx-auto max-w-6xl px-6 pb-32">
+            <section id="features" className="relative mx-auto max-w-6xl px-6 pb-32">
                 <div className="space-y-12">
                     {/* Built for distributed-systems */}
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-start">
@@ -426,7 +442,7 @@ export default function Home() {
             </section>
 
             {/* Pricing Section */}
-            <section className="relative mx-auto max-w-6xl px-6 pb-32">
+            <section id="pricing" className="relative mx-auto max-w-6xl px-6 pb-32">
                 <div className="text-center">
                     <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
                         Pricing
@@ -545,33 +561,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="border-t border-white/10 bg-gradient-to-t from-black/30 to-transparent">
-                <div className="mx-auto max-w-7xl px-6 py-10">
-                    <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-                        <div className="flex items-center gap-2">
-                            <Image
-                                src="/logo.svg"
-                                alt="MaiMap Logo"
-                                width={76}
-                                height={76}
-                                className="h-6 w-12 opacity-70"
-                            />
-                            <span className="font-sans text-lg font-semibold">MaiMap</span>
-                        </div>
-
-                        <div className="flex items-center gap-6 text-sm text-muted-foreground">
-                            <a href="#features" className="transition-colors hover:text-foreground">Features</a>
-                            <a href="/docs" className="transition-colors hover:text-foreground">Docs</a>
-                            <a href="#pricing" className="transition-colors hover:text-foreground">Pricing</a>
-                        </div>
-
-                        <div className="text-xs text-muted-foreground">
-                            © {new Date().getFullYear()} MaiMap. All rights reserved.
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <SiteFooter />
         </div>
     )
 }

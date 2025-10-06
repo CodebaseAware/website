@@ -1,3 +1,4 @@
+import { SiteFooter } from './components/site-footer'
 import { SiteNavbar } from './components/site-navbar'
 
 export default {
@@ -14,6 +15,6 @@ export default {
         component: <SiteNavbar />,
     },
     footer: {
-        text: 'MaiMap Documentation',
+        component: <SiteFooter />,
     },
 }
