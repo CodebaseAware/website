@@ -137,3 +137,7 @@
 .nextra-sidebar-footer {
     display: none;
   }
+
+  .nodeLabel {
+    color: #bbbbbb !important;
+  }

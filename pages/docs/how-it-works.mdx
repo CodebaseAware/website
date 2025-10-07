@@ -11,17 +11,17 @@ MaiMap connects to your Git organization and imports your code for analysis. Onc
 config:
   layout: dagre
 ---
-flowchart TB
-    subgraph system [" "]
+flowchart LR
+    subgraph system ["MaiMap"]
         n1@{ label: "<img src=\"https://raw.githubusercontent.com/evanrolfe/trayce_gui/refs/heads/main/fonts/logo.svg\" style=\"width:20px;height:20px\"> Analyzer" }
-        B[("Database")]
+        B[("Graph<br>Database")]
         A["API"]
     end
     GIT["Git"]
     n1 --> B
     GIT --> n1
-    F["Web interface"]
-    subgraph external [" "]
+    F["Web Interface"]
+    subgraph external ["User's Local Machine"]
         D@{ label: "MCP Server" }
         G["fa:fa-table LLM"]
     end
@@ -33,8 +33,6 @@ flowchart TB
     style system fill:transparent,stroke-dasharray: 5 5,stroke-width:2px
     style external fill:transparent,stroke-dasharray: 5 5,stroke-width:2px
     style B stroke-width:1px
-    style D width:150px
-    style F width:150px
 ```
 
 ## Details
