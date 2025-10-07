@@ -11,6 +11,9 @@ export default {
         defaultTheme: 'dark',
         forcedTheme: 'dark',
     },
+    themeSwitch: {
+        component: null,
+    },
     navbar: {
         component: <SiteNavbar />,
     },

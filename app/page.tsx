@@ -61,7 +61,7 @@ export default function Home() {
     ]
 
     return (
-        <div className="dark min-h-screen bg-gradient-to-br from-[#0a0a0a] via-[#183838] to-[#0a0a0a] text-white">
+        <div className="dark min-h-screen bg-gradient-to-br from-[#0a0a0a] via-[#0f2020] to-[#0a0a0a] text-white">
             <SiteNavbar />
 
             {/* Hero Section */}

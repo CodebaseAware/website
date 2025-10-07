@@ -125,10 +125,15 @@
 
 /* Override Nextra content color in dark mode */
 .nextra-content:is(html[class~=dark] *) {
-  color: #a3a3a3 !important;
+  color: #bbbbbb !important;
 }
 
 /* Override markdown header titles color in dark mode */
 .dark\:_text-slate-100:is(html[class~=dark] *) {
-  color: #a3a3a3 !important;
+  color: #bbbbbb !important;
 }
+
+/* Hide dark/light mode switcher in docs sidebar */
+.nextra-sidebar-footer {
+    display: none;
+  }

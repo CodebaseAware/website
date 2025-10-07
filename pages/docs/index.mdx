@@ -2,15 +2,18 @@
 title: Introduction
 ---
 
-# MaiMap Documentation
-
-Welcome to the MaiMap documentation site. Use the sidebar to navigate.
+# Introduction
 
 ## What is MaiMap?
 
-MaiMap is an MCP server that helps your LLM understand distributed systems.
+MaiMap is a service which analyzes your entire distributed codebase and provides that information to you via a web interface and empowers your LLM via an MCP server.
 
-## Next Steps
+## How is it different from existing AI solutions?
 
-- Read the Getting Started guide
-- Explore features
+Most existing LLM-based code editors use a naive approach of providing their AI with text-based search capabilities for an entire codebase. MaiMap uses a combination of rule-based and LLM-based static code analysis to parse your codebase(s) into a deep contextual map. That map is stored in a graph database and served to your LLM model via an MCP server.
+
+This allows a MaiMap-enabled LLM to answer prompts that they would otherwise be incapable of answering. For example:
+- "Describe the overall architecture of my microservices"
+- "What are the bounded contexts of my services?"
+- "Which endpoints in the auth-service query the user_permissions table in Postgres?"
+- "Trace the series of events, API calls and side-effects that happen when a user signs up"
