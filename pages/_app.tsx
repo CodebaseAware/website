@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
             </div>
 
             {/* Solid background overlay for docs content only - positioned below navbar */}
-            <div className="absolute top-16 left-0 right-0 bottom-0 bg-[#0a0a0a] z-5" />
+            {/* <div className="absolute top-16 left-0 right-0 bottom-0 bg-[#0a0a0a] z-5" /> */}
         </div>
     )
 }
