@@ -11,6 +11,7 @@ Access at: http://localhost:3000/
 ```
 npm run build
 touch docs/.nojekyll
+echo "maimap.dev" > docs/CNAME
 ```
 
 Commit the changes to `./docs` then push to deploy to Github pages.

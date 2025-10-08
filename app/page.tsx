@@ -575,7 +575,7 @@ export default function Home() {
             </section>
 
             {/* FAQ Section */}
-            <section className="relative mx-auto max-w-4xl px-6 pb-32">
+            {/* <section className="relative mx-auto max-w-4xl px-6 pb-32">
                 <div className="text-center">
                     <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
                         Frequently Asked Questions
@@ -613,7 +613,7 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <SiteFooter />
         </div>

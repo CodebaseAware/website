@@ -139,7 +139,9 @@ export default function ForceGraphClient({ width = 960, height = 540 }: Props) {
                 .width(containerRef.current.clientWidth)
                 .height(containerRef.current.clientHeight)
                 .graphData(gData)
-                .zoom(11) // Set default zoom to 2x
+                .zoom(11)
+                .minZoom(11)
+                .maxZoom(11)
                 .nodeColor(() => 'rgba(0,0,0,0)')
                 .nodeCanvasObjectMode(() => 'before')
                 .onNodeDragEnd((node: any) => {
