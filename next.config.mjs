@@ -10,15 +10,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/website',
-  assetPrefix: '/website',
   trailingSlash: true,
   output: 'export',
   distDir: 'docs',
   devIndicators: false,
-  publicRuntimeConfig: {
-    basePath: '/website',
-  },
+  // basePath: '/website',
+  // assetPrefix: '/website',
+  // publicRuntimeConfig: {
+  //   basePath: '/website',
+  // },
 }
 
 export default withNextra({

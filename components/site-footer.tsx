@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function SiteFooter() {
     const config = getConfig();
-    const basePath = config?.publicRuntimeConfig?.basePath || '/website';
+    const basePath = config?.publicRuntimeConfig?.basePath || '';
     return (
         <footer className="border-t border-white/10 bg-gradient-to-t from-black/30 to-transparent">
             <div className="mx-auto max-w-7xl px-6 py-10">

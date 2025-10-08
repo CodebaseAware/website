@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function SiteNavbar() {
     const config = getConfig();
-    const basePath = config?.publicRuntimeConfig?.basePath || '/website';
+    const basePath = config?.publicRuntimeConfig?.basePath || '';
     return (
         <nav className="sticky top-0 z-50 backdrop-blur-lg bg-transparent relative">
             <div className="mx-auto max-w-7xl px-6 py-4">
