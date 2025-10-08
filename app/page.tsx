@@ -165,32 +165,113 @@ export default function Home() {
                                     </div>
 
                                     {/* Screenshot Content */}
-                                    <div className="aspect-video bg-gradient-to-br from-[#0f1f1f] to-[#0a0a0a] p-8">
+                                    <div className="aspect-[4/3] bg-gradient-to-br from-[#0f1f1f] to-[#0a0a0a] p-8">
                                         <div className="flex h-full flex-col gap-6">
-                                            {/* Chat Interface Mockup */}
-                                            <div className="flex items-center gap-3 border-b border-white/10 pb-4">
-                                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-primary">
-                                                    <Code2 className="h-4 w-4 text-black" />
-                                                </div>
-                                                <span className="font-mono text-sm font-semibold">System Analyzer</span>
-                                            </div>
-
                                             <div className="flex-1 space-y-4">
-                                                {/* User Message */}
+                                                {/* User Message 1 */}
                                                 <div className="flex justify-end">
                                                     <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-accent/20 px-4 py-3 text-sm">
-                                                        <p className="text-foreground">What are the dependencies between my services?</p>
+                                                        <p className="text-foreground">Show me the data flow between my authentication service and user management system</p>
                                                     </div>
                                                 </div>
 
-                                                {/* AI Response */}
+                                                {/* AI Response 1 */}
                                                 <div className="flex gap-3">
                                                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent to-primary">
                                                         <Code2 className="h-4 w-4 text-black" />
                                                     </div>
                                                     <div className="flex-1 space-y-2">
                                                         <div className="h-3 w-full rounded bg-white/10" />
+                                                        <div className="h-3 w-3/4 rounded bg-white/10" />
+                                                    </div>
+                                                </div>
+
+                                                {/* User Message 2 */}
+                                                <div className="flex justify-end">
+                                                    <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-accent/20 px-4 py-3 text-sm">
+                                                        <p className="text-foreground">Which services depend on the payment processing module and what happens if it goes down?</p>
+                                                    </div>
+                                                </div>
+
+                                                {/* AI Response 2 */}
+                                                <div className="flex gap-3">
+                                                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent to-primary">
+                                                        <Code2 className="h-4 w-4 text-black" />
+                                                    </div>
+                                                    <div className="flex-1 space-y-2">
                                                         <div className="h-3 w-5/6 rounded bg-white/10" />
+                                                        <div className="h-3 w-4/5 rounded bg-white/10" />
+                                                        <div className="h-3 w-2/3 rounded bg-white/10" />
+                                                    </div>
+                                                </div>
+
+                                                {/* User Message 3 */}
+                                                <div className="flex justify-end">
+                                                    <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-accent/20 px-4 py-3 text-sm">
+                                                        <p className="text-foreground">Which endpoints in the auth-service query the user_permissions table in Postgres?</p>
+                                                    </div>
+                                                </div>
+
+                                                {/* AI Response 3 */}
+                                                <div className="flex gap-3">
+                                                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent to-primary">
+                                                        <Code2 className="h-4 w-4 text-black" />
+                                                    </div>
+                                                    <div className="flex-1 space-y-2">
+                                                        <div className="h-3 w-4/5 rounded bg-white/10" />
+                                                    </div>
+                                                </div>
+
+                                                {/* User Message 4 */}
+                                                <div className="flex justify-end">
+                                                    <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-accent/20 px-4 py-3 text-sm">
+                                                        <p className="text-foreground">Trace the series of events, API calls and side-effects that happen when a user signs up</p>
+                                                    </div>
+                                                </div>
+
+                                                {/* AI Response 4 */}
+                                                <div className="flex gap-3">
+                                                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent to-primary">
+                                                        <Code2 className="h-4 w-4 text-black" />
+                                                    </div>
+                                                    <div className="flex-1 space-y-2">
+                                                        <div className="h-3 w-full rounded bg-white/10" />
+                                                        <div className="h-3 w-3/4 rounded bg-white/10" />
+                                                        <div className="h-3 w-5/6 rounded bg-white/10" />
+                                                    </div>
+                                                </div>
+
+                                                {/* User Message 5 */}
+                                                <div className="flex justify-end">
+                                                    <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-accent/20 px-4 py-3 text-sm">
+                                                        <p className="text-foreground">Describe the overall architecture of my microservices and how they interact with each other</p>
+                                                    </div>
+                                                </div>
+
+                                                {/* AI Response 5 */}
+                                                <div className="flex gap-3">
+                                                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent to-primary">
+                                                        <Code2 className="h-4 w-4 text-black" />
+                                                    </div>
+                                                    <div className="flex-1 space-y-2">
+                                                        <div className="h-3 w-5/6 rounded bg-white/10" />
+                                                        <div className="h-3 w-2/3 rounded bg-white/10" />
+                                                    </div>
+                                                </div>
+
+                                                {/* User Message 6 */}
+                                                <div className="flex justify-end">
+                                                    <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-accent/20 px-4 py-3 text-sm">
+                                                        <p className="text-foreground">What are the bounded contexts of my services and how do they map to business domains?</p>
+                                                    </div>
+                                                </div>
+
+                                                {/* AI Response 6 */}
+                                                <div className="flex gap-3">
+                                                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent to-primary">
+                                                        <Code2 className="h-4 w-4 text-black" />
+                                                    </div>
+                                                    <div className="flex-1 space-y-2">
                                                         <div className="h-3 w-4/5 rounded bg-white/10" />
                                                     </div>
                                                 </div>
