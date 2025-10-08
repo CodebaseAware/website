@@ -91,31 +91,70 @@ export default function Home() {
                         <div id="join" className="mb-8 flex flex-col items-center gap-4" ref={emailBoxRef}>
                             <div className="relative rounded-sm border border-white/10 p-[1px] shadow-2xl backdrop-blur-sm">
                                 <div className="overflow-hidden rounded-sm bg-gradient-to-br from-teal-400/10 to-teal-400/5 p-8">
-                                    <div className="mb-4 text-center">
-                                        <p className="text-lg font-medium text-white">Get notified when we launch</p>
-                                    </div>
-                                    <div className="flex w-full max-w-md gap-2">
-                                        <Input
-                                            ref={emailInputRef}
-                                            type="email"
-                                            placeholder="Enter your email"
-                                            className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-primary focus:ring-primary/50"
-                                        />
-                                        <Button size="lg" className="group bg-primary text-black hover:bg-primary/90">
-                                            Join waitlist
-                                        </Button>
-                                    </div>
+                                    <form
+                                        action="https://pntest.us14.list-manage.com/subscribe/post?u=12e6589bb25afc25201b8a0d6&amp;id=c96c436682&amp;f_id=008192e0f0"
+                                        method="post"
+                                        id="mc-embedded-subscribe-form"
+                                        name="mc-embedded-subscribe-form"
+                                        className="validate"
+                                        target="_self"
+                                        noValidate
+                                    >
+                                        <div className="mb-4 text-center">
+                                            <p className="text-lg font-medium text-white">Get notified when we launch</p>
+                                        </div>
+                                        <div className="flex w-full max-w-md gap-2">
+                                            <Input
+                                                ref={emailInputRef}
+                                                type="email"
+                                                name="EMAIL"
+                                                id="mce-EMAIL"
+                                                placeholder="Enter your email"
+                                                className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-primary focus:ring-primary/50"
+                                                required
+                                            />
+                                            <Button
+                                                type="submit"
+                                                name="subscribe"
+                                                id="mc-embedded-subscribe"
+                                                size="lg"
+                                                className="group bg-primary text-black hover:bg-primary/90 cursor-pointer"
+                                            >
+                                                Join waitlist
+                                            </Button>
+                                        </div>
 
-                                    {/* Or Divider and Survey Link */}
-                                    <div className="mt-6 flex flex-col items-center gap-4">
-                                        <div className="text-lg font-bold text-white/80">Or:</div>
-                                        <a
-                                            href="#"
-                                            className="text-lg font-medium text-primary hover:text-primary/80 transition-colors underline decoration-primary/50 hover:decoration-primary"
-                                        >
-                                            Fill out our customer survey to get 3 months free!
-                                        </a>
-                                    </div>
+                                        {/* Hidden honeypot field */}
+                                        <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
+                                            <input type="text" name="b_12e6589bb25afc25201b8a0d6_c96c436682" tabIndex={-1} value="" />
+                                        </div>
+
+                                        {/* Unsubscribe message */}
+                                        <div className="mt-4 text-center">
+                                            <small className="text-sm text-white/70">
+                                                *You can unsubscribe at anytime{' '}
+                                                <span
+                                                    className="cursor-pointer text-primary hover:text-primary/80"
+                                                    title="To unsubscribe, enter your email, click 'Sign up' and then click 'Update your preferences'"
+                                                >
+                                                    <svg className="inline h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                                                    </svg>
+                                                </span>
+                                            </small>
+                                        </div>
+
+                                        {/* Or Divider and Survey Link */}
+                                        {/* <div className="mt-6 flex flex-col items-center gap-4">
+                                            <div className="text-lg font-bold text-white/80">Or:</div>
+                                            <a
+                                                href="#"
+                                                className="text-lg font-medium text-primary hover:text-primary/80 transition-colors underline decoration-primary/50 hover:decoration-primary"
+                                            >
+                                                Fill out our customer survey to get 3 months free!
+                                            </a>
+                                        </div> */}
+                                    </form>
                                 </div>
                             </div>
                         </div>
