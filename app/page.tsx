@@ -1,10 +1,11 @@
 "use client"
 
+import ForceGraphClient from "@/components/graph/ForceGraphClient"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteNavbar } from "@/components/site-navbar"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { ArrowDownLeft, ArrowRight, Binoculars, BookOpen, Code2, Lightbulb, Network, Sparkles } from "lucide-react"
+import { ArrowDownLeft, ArrowRight, Binoculars, BookOpen, Code2, Lightbulb, Network } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 export default function Home() {
@@ -224,36 +225,8 @@ export default function Home() {
                                     </div>
 
                                     {/* Screenshot Content */}
-                                    <div className="aspect-video bg-gradient-to-br from-[#0f1f1f] to-[#0a0a0a] p-8">
-                                        <div className="flex h-full flex-col gap-6">
-                                            {/* Chat Interface Mockup */}
-                                            <div className="flex items-center gap-3 border-b border-white/10 pb-4">
-                                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent">
-                                                    <Sparkles className="h-4 w-4 text-black" />
-                                                </div>
-                                                <span className="font-mono text-sm font-semibold">AI Assistant</span>
-                                            </div>
-
-                                            <div className="flex-1 space-y-4">
-                                                {/* User Message */}
-                                                <div className="flex justify-end">
-                                                    <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-primary/20 px-4 py-3 text-sm">
-                                                        <p className="text-foreground">Trace the user.created event through my microservices</p>
-                                                    </div>
-                                                </div>
-
-                                                {/* AI Response Loading */}
-                                                <div className="flex gap-3">
-                                                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent">
-                                                        <Sparkles className="h-4 w-4 text-black" />
-                                                    </div>
-                                                    <div className="flex-1 space-y-2">
-                                                        <div className="h-3 w-3/4 animate-pulse rounded bg-white/10" />
-                                                        <div className="h-3 w-1/2 animate-pulse rounded bg-white/10" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div className="aspect-video bg-gradient-to-br from-[#0f1f1f] to-[#0a0a0a] p-2">
+                                        <ForceGraphClient />
                                     </div>
                                 </div>
                             </div>
