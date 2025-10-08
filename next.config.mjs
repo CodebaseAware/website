@@ -10,6 +10,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: '/website',
+  assetPrefix: '/website',
+  trailingSlash: true,
   output: 'export',
   devIndicators: false
 }
