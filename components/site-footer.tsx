@@ -1,16 +1,19 @@
 "use client";
 
+import getConfig from "next/config";
 import Image from "next/image";
 import Link from "next/link";
 
 export function SiteFooter() {
+    const config = getConfig();
+    const basePath = config?.publicRuntimeConfig?.basePath || '/website';
     return (
         <footer className="border-t border-white/10 bg-gradient-to-t from-black/30 to-transparent">
             <div className="mx-auto max-w-7xl px-6 py-10">
                 <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
                     <div className="flex items-center gap-2">
                         <Image
-                            src="/logo.svg"
+                            src={`${basePath}/logo.svg`}
                             alt="MaiMap Logo"
                             width={76}
                             height={76}

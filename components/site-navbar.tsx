@@ -1,16 +1,19 @@
 "use client";
 
+import getConfig from "next/config";
 import Image from "next/image";
 import Link from "next/link";
 
 export function SiteNavbar() {
+    const config = getConfig();
+    const basePath = config?.publicRuntimeConfig?.basePath || '/website';
     return (
         <nav className="sticky top-0 z-50 backdrop-blur-lg bg-transparent relative">
             <div className="mx-auto max-w-7xl px-6 py-4">
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2">
                         <Image
-                            src="/logo.svg"
+                            src={`${basePath}/logo.svg`}
                             alt="MaiMap Logo"
                             width={76}
                             height={76}

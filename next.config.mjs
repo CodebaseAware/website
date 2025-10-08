@@ -15,7 +15,10 @@ const nextConfig = {
   trailingSlash: true,
   output: 'export',
   distDir: 'docs',
-  devIndicators: false
+  devIndicators: false,
+  publicRuntimeConfig: {
+    basePath: '/website',
+  },
 }
 
 export default withNextra({
