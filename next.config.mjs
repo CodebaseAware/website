@@ -14,6 +14,7 @@ const nextConfig = {
   assetPrefix: '/website',
   trailingSlash: true,
   output: 'export',
+  distDir: 'docs',
   devIndicators: false
 }
 
