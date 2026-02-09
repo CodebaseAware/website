@@ -25,6 +25,9 @@ export function SiteNavbar() {
                         <Link href="/" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                             Features
                         </Link>
+                        <Link href="https://demo.maimap.dev" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                            Demo
+                        </Link>
                         <Link href="/docs" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                             Docs
                         </Link>
