@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"components/graph/ForceGraphClient.tsx -> force-graph\":{\"id\":\"components/graph/ForceGraphClient.tsx -> force-graph\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_force-graph_dist_force-graph_mjs.js\"]}}"
